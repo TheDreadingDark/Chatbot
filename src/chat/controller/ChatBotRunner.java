@@ -6,7 +6,7 @@ public class ChatBotRunner
 {
 	public static void main(String [] args)
 	{
-		PopupDisplay test = PopupDisplay();
+		PopupDisplay test = new PopupDisplay();
 		test.displayText("words go here");
 		test.collectResponse("ask a question");
 	}
