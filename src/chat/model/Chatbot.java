@@ -70,7 +70,10 @@ public class Chatbot
 	
 	private void buildQuestions()
 	{
-		
+		topics[0] = "Have you considered learning forbidden techniques?";
+		topics[1] = "Have you done things you're not proud of in the past?";
+		topics[2] = "Have you betrayed someone's trust in your lifetime?";
+		topics[3] = "Do you use shadows took take down your enemies?"; 
 	}
 	
 	public String processConversation(String input)
@@ -151,12 +154,63 @@ public class Chatbot
 
 	public boolean quitChecker(String exitString)
 	{
+		if (exitString.equalsIgnoreCase("quit"))
+		{
+			return true;
+		}
 		return false;
 	}
 
-	public boolean keyboardMashChecker(String sample)
+	public boolean keyboardMashChecker(String input)
 	{
-		return false;
+		if (input.contains("S.D.F."))
+		{
+			return false;
+		}
+		else if (input.contains("derf"))
+		{
+			return false;
+		}
+		else if (input.contains("sdf"))
+		{
+			return true;
+		}
+		else if (input.contains("SDF"))
+		{
+			return true;
+		}
+		else if (input.contains("dfg"))
+		{
+			return true;
+		}
+		else if (input.contains("cvb"))
+		{
+			return true;
+		}
+		else if (input.contains(",./"))
+		{
+			return true;
+		}
+		else if (input.contains("kjh"))
+		{
+			return true;
+		}
+		else if (input.contains("DFG"))
+		{
+			return true;
+		}
+		else if (input.contains("CVB"))
+		{
+			return true;
+		}
+		else if (input.contains("KJH"))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
 	
 	public List<Movie> getMovieList()
