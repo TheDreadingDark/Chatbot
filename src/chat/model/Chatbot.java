@@ -47,6 +47,8 @@ public class Chatbot
 		topics[4] = "top laners";
 	}
 	
+//	Topics that the Chatbot uses when you run the program
+	
 	private void buildVerbs()
 	{
 		verbs[0] = "like";
@@ -54,6 +56,8 @@ public class Chatbot
 		verbs[2] = "am ambivalent about";
 		verbs[3] = "am thinking about";
 	}
+	
+//	Verbs that the Chatbot uses when you run the program
 	
 	private void buildMovieList()
 	{
@@ -74,6 +78,8 @@ public class Chatbot
 		shoppingList.add("juice");
 	}
 	
+//	The shoppinglist without the list items that will crash it
+	
 	private void buildCuteAnimals()
 	{
 		
@@ -88,6 +94,8 @@ public class Chatbot
 		questions[4] = "Who's your favorite assassin?";
 		questions[5] = "Which mage do you hate the most?";
 	}
+	
+//	Questions the Chatbot asks once you run the program
 	
 	public String processConversation(String input)
 	{
@@ -152,7 +160,17 @@ public class Chatbot
 	
 	public boolean shoppingListChecker(String shoppingItem)
 	{
+		for (int index = 0; index < shoppingList.size(); index++)
+		{
+			if (shoppingItem.contains(shoppingList.get(index)))
+			{
+				return true;
+			}
+			
+		}
+		
 		return false;
+		
 	}
 	
 	public boolean movieTitleChecker(String title)
