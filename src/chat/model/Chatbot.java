@@ -24,16 +24,27 @@ public class Chatbot
 		this.shoppingList = new ArrayList<String>();
 		this.cuteAnimalMemes = null;
 		this.currentTime = null;
-		this.questions = null;
+		this.questions = new String [6];
 		this.username = username;
 		this.content = null;
 		this.intro = null;
-		this.topics = null;
+		this.topics = new String [5];
 		this.verbs = new String [4];
 		this.followUps = null;
 	
 		buildVerbs();
 		buildShoppingList();
+		buildTopics();
+		buildQuestions();
+	}
+	
+	private void buildTopics()
+	{
+		topics[0] = "Summoner's Rift";
+		topics[1] = "mages";
+		topics[2] = "marksman";
+		topics[3] = "supports";
+		topics[4] = "top laners";
 	}
 	
 	private void buildVerbs()
@@ -70,10 +81,12 @@ public class Chatbot
 	
 	private void buildQuestions()
 	{
-		topics[0] = "Have you considered learning forbidden techniques?";
-		topics[1] = "Have you done things you're not proud of in the past?";
-		topics[2] = "Have you betrayed someone's trust in your lifetime?";
-		topics[3] = "Do you use shadows took take down your enemies?"; 
+		questions[0] = "Have you considered learning forbidden techniques?";
+		questions[1] = "Have you done things you're not proud of in the past?";
+		questions[2] = "Have you betrayed someone's trust in your lifetime?";
+		questions[3] = "Do you use shadows to take down your enemies?";
+		questions[4] = "Who's your favorite assassin?";
+		questions[5] = "Which mage do you hate the most?";
 	}
 	
 	public String processConversation(String input)
@@ -163,15 +176,7 @@ public class Chatbot
 
 	public boolean keyboardMashChecker(String input)
 	{
-		if (input.contains("S.D.F."))
-		{
-			return false;
-		}
-		else if (input.contains("derf"))
-		{
-			return false;
-		}
-		else if (input.contains("sdf"))
+		if (input.contains("sdf"))
 		{
 			return true;
 		}
