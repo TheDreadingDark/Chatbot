@@ -6,22 +6,21 @@ import javax.swing.JFrame;
 public class ChatFrame extends JFrame
 {
 	private ChatbotController appController;
-	private ChatPanel appPane;
-	
-	public ChatFrame(ChatbobtController appController)
+//	private ChatPanel appPanel;	
+	public ChatFrame(ChatbotController appController)
 	{
 		super();
-		this.appController;
-		appPane = new ChatPanel(appController);
+		this.appController = appController;
+//		appPanel = new ChatPanel(appController);
 		setupFrame();
 	}
 	
 	private void setupFrame()
 	{
-		this.setContentPane(appPane);
-		this.setTitle("Chatting with the chatbot");
+//		this.setContentPane(appPanel);
+		this.setSize(500, 500);
+		this.setTitle("Chatbot 2017");
 		this.setResizable(false);
-		this.setSize(600, 600);
 		this.setVisible(true);
 	}
 }
