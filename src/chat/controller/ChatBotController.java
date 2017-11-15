@@ -7,10 +7,12 @@ public class ChatbotController
 {
 	private Chatbot chatbot;
 	private PopupDisplay display;
+//	private ChatFrame appFrame;
 	
 	public ChatbotController()
 	{
 		chatbot = new Chatbot("AJ Woolsey");
+		//View initialized after Model
 		display = new PopupDisplay();
 	}
 	
@@ -18,11 +20,11 @@ public class ChatbotController
 	{
 		String response = display.collectResponse("What do you want to talk about?");
 		
-		while (chatbot.lengthChecker(response) && !chatbot.quitChecker(response))
-		{
-			response = popupChat(response);
-			response = display.collectResponse(response);
-		}
+//		while (chatbot.lengthChecker(response) && !chatbot.quitChecker(response))
+//		{
+//			response = popupChat(response);
+//			response = display.collectResponse(response);
+//		}
 	}
 	
 	private String popupChat(String chat)
