@@ -41,13 +41,16 @@ public class ChatPanel extends JPanel
 		this.add(chatButton);
 		this.add(inputField);
 		this.add(chatArea);
+
 	}
 	
 	private void setupLayout()
 	{
+
 		appLayout.putConstraint(SpringLayout.NORTH, chatArea, 20, SpringLayout.NORTH, this);
 		appLayout.putConstraint(SpringLayout.WEST, chatArea, 25, SpringLayout.WEST, this);
 		appLayout.putConstraint(SpringLayout.EAST, chatArea, -25, SpringLayout.EAST, this);
+
 	}
 	
 	private void setupListeners()
