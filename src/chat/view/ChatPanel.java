@@ -17,6 +17,7 @@ public class ChatPanel extends JPanel
 	private JTextField inputField;
 	private JTextArea chatArea;
 	private SpringLayout appLayout;
+	private JButton checkerButton;
 	
 	/**
 	 * Initialize GUI data members
