@@ -47,7 +47,7 @@ public class ChatbotController
 	{
 		String chatbotSays = "";
 		
-		chatbot.processConversation(input);
+		chatbotSays += chatbot.processConversation(input);
 		
 		return chatbotSays;
 	}
