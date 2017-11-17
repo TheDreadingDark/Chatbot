@@ -9,7 +9,7 @@ public class ChatFrame extends JFrame
 	private ChatPanel appPanel;	
 	
 	/**
-	 * 
+	 * Initializes ChatFrame
 	 * @param appController
 	 */
 	public ChatFrame(ChatbotController appController)
@@ -20,6 +20,9 @@ public class ChatFrame extends JFrame
 		setupFrame();
 	}
 	
+	/**
+	 * Settings for ChatFrame including being able to see ChatFrame
+	 */
 	private void setupFrame()
 	{
 		this.setContentPane(appPanel);

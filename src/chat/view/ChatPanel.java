@@ -17,7 +17,7 @@ public class ChatPanel extends JPanel
 	private SpringLayout appLayout;
 	
 	/**
-	 * 
+	 * Initialize GUI data members
 	 * @param appController
 	 */
 	public ChatPanel(ChatbotController appController)
@@ -25,7 +25,6 @@ public class ChatPanel extends JPanel
 		super();
 		this.appController = appController;
 		
-		//Initialize GUI data members
 		chatButton = new JButton("chat");
 		chatArea = new JTextArea(10, 25);
 		inputField = new JTextField(20);
@@ -49,6 +48,9 @@ public class ChatPanel extends JPanel
 		chatArea.setEditable(false);
 	}
 	
+	/**
+	 * Holds all the code created from the WindowBuilder
+	 */
 	private void setupLayout()
 	{
 
