@@ -10,6 +10,9 @@ public class ChatbotController
 	private PopupDisplay display;
 	private ChatFrame appFrame;
 	
+	/**
+	 * Declaring variables
+	 */
 	public ChatbotController()
 	{
 		chatbot = new Chatbot("AJ Woolsey");
@@ -18,6 +21,9 @@ public class ChatbotController
 		appFrame = new ChatFrame(this);
 	}
 	
+	/**
+	 * Starts the window with Chatbot saying, "What do you want to talk about?"
+	 */
 	public void start()
 	{
 		String response = display.collectResponse("What do you want to talk about?");
@@ -29,6 +35,11 @@ public class ChatbotController
 //		}
 	}
 	
+	/**
+	 * Chatbot replies with nothing till the user does then shows what the user said then Chatbot replies
+	 * @param chat
+	 * @return
+	 */
 	private String popupChat(String chat)
 	{
 		String chatbotSays = "";

@@ -16,6 +16,10 @@ public class ChatPanel extends JPanel
 	private JTextArea chatArea;
 	private SpringLayout appLayout;
 	
+	/**
+	 * 
+	 * @param appController
+	 */
 	public ChatPanel(ChatbotController appController)
 	{
 		super();
