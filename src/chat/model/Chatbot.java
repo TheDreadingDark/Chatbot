@@ -20,7 +20,7 @@ public class Chatbot
 	
 	public Chatbot(String username)
 	{
-		this.movieList = null;
+		this.movieList = new ArrayList<Movie>();
 		this.shoppingList = new ArrayList<String>();
 		this.cuteAnimalMemes = null;
 		this.currentTime = null;
@@ -36,6 +36,7 @@ public class Chatbot
 		buildShoppingList();
 		buildTopics();
 		buildQuestions();
+		buildMovieList();
 	}
 	
 	private void buildTopics()
@@ -61,6 +62,7 @@ public class Chatbot
 	
 	private void buildMovieList()
 	{
+		Movie[0] = "Transformers (1986)";
 		
 	}
 	
