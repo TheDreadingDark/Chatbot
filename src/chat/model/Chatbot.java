@@ -33,10 +33,10 @@ public class Chatbot
 		this.followUps = null;
 	
 		buildVerbs();
+		buildMovieList();
 		buildShoppingList();
 		buildTopics();
 		buildQuestions();
-		buildMovieList();
 	}
 	
 	private void buildTopics()
@@ -62,7 +62,10 @@ public class Chatbot
 	
 	private void buildMovieList()
 	{
-		Movie[0] = "Transformers (1986)";
+		movieList.add("Transformers (1986)");
+		movieList.add("Spawn");
+		movieList.add("The Incredible Hulk");
+		movieList.add("Thor: Ragnarok");
 		
 	}
 	
