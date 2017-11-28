@@ -9,6 +9,7 @@ import chat.controller.ChatbotController;
 import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JLabel;
 
 public class ChatPanel extends JPanel
 {
@@ -18,6 +19,7 @@ public class ChatPanel extends JPanel
 	private JTextArea chatArea;
 	private SpringLayout appLayout;
 	private JButton checkerButton;
+	private JLabel infoLabel;
 	
 	/**
 	 * Initialize GUI data members
@@ -31,6 +33,7 @@ public class ChatPanel extends JPanel
 		chatButton = new JButton("chat");
 		chatArea = new JTextArea(10, 25);
 		inputField = new JTextField(20);
+		infoLabel = new JLabel ("Type to chat with the chatbot");
 		appLayout = new SpringLayout();
 		
 		
@@ -49,6 +52,7 @@ public class ChatPanel extends JPanel
 		this.add(chatArea);
 		chatArea.setEnabled(false);
 		chatArea.setEditable(false);
+		this.add(infoLabel);
 	}
 	
 	/**
@@ -64,6 +68,8 @@ public class ChatPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);
 		appLayout.putConstraint(SpringLayout.SOUTH, chatButton, -26, SpringLayout.SOUTH, this);
 		appLayout.putConstraint(SpringLayout.EAST, chatButton, 0, SpringLayout.EAST, chatArea);
+		appLayout.putConstraint(SpringLayout.WEST, infoLabel, 30, SpringLayout.WEST, this);
+		appLayout.putConstraint(SpringLayout.SOUTH, infoLabel, -3, SpringLayout.NORTH, inputField);
 		
 
 	}
