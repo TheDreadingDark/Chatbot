@@ -170,6 +170,13 @@ public class Chatbot
 	
 	public boolean htmlTagChecker(String input)
 	{
+		String l
+		
+		if 
+		{
+			
+		}
+		
 		return false;
 	}
 	
