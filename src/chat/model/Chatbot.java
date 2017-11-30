@@ -170,11 +170,33 @@ public class Chatbot
 	
 	public boolean htmlTagChecker(String input)
 	{
-		String l
-		
-		if 
+		boolean containsHTML = false;
+		if(input == null || !input.contains("<")) 
 		{
-			
+			return containsHTML;
+		}
+		int firstOpen = input.indexOf("<");
+		int firstClose = input.indexOf(">",firstOpen);
+		int secondOpen = -9;
+		int secondClose = -9;
+		String tagText = "";
+		
+		//Check bad tags
+		if(input.contains("<>") || input.indexOf("< >") > -1)
+		{
+			containsHTML = false;
+		}
+		//Check singleton
+		if(input.toUpperCase().contains("<P>") || input.toLowerCase().contains("<br>"))
+		{
+			containsHTML = true;
+		}
+		//Check others
+		else if(firstClose > firstOpen)
+		{
+			//others
+			tagText = input.substring(firstOpen + 1,  firstClose).toLowerCase();
+			secondOpen = input.toLowerCase().indexOf("</" + tagText, firstClose);
 		}
 		
 		return false;
