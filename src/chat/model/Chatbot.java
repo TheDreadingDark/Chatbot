@@ -62,10 +62,10 @@ public class Chatbot
 	
 	private void buildMovieList()
 	{
-		movieList.add("Transformers (1986)");
-		movieList.add("Spawn");
-		movieList.add("The Incredible Hulk");
-		movieList.add("Thor: Ragnarok");
+		movieList.add(new Movie ("Transformers (1986)"));
+		movieList.add(new Movie ("Spawn"));
+		movieList.add(new Movie ("The Incredible Hulk"));
+		movieList.add(new Movie ("Thor: Ragnarok"));
 		
 	}
 	
