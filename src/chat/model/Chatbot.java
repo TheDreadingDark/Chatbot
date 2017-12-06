@@ -66,6 +66,8 @@ public class Chatbot
 		movieList.add(new Movie ("Spawn"));
 		movieList.add(new Movie ("The Incredible Hulk"));
 		movieList.add(new Movie ("Thor: Ragnarok"));
+		movieList.add(new Movie ("Spiderman"));
+		movieList.add(new Movie ("Hidden Figures"));
 		
 	}
 	
