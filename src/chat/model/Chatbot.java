@@ -18,6 +18,10 @@ public class Chatbot
 	private String intro;
 	private LocalTime currentTime;
 	
+	/**
+	 * Where all lists are declared
+	 * @param username
+	 */
 	public Chatbot(String username)
 	{
 		this.movieList = new ArrayList<Movie>();
@@ -39,6 +43,9 @@ public class Chatbot
 		buildQuestions();
 	}
 	
+	/**
+	 * Topics list for Chatbot
+	 */
 	private void buildTopics()
 	{
 		topics[0] = "Summoner's Rift";
@@ -60,6 +67,9 @@ public class Chatbot
 	
 //	Verbs that the Chatbot uses when you run the program
 	
+	/**
+	 * The movie list for Chatbot
+	 */
 	private void buildMovieList()
 	{
 		movieList.add(new Movie ("Transformers (1986)"));
@@ -71,6 +81,9 @@ public class Chatbot
 		
 	}
 	
+	/**
+	 * Shopping list for Chatbot
+	 */
 	private void buildShoppingList()
 	{
 		shoppingList.add("snacks");
@@ -92,6 +105,9 @@ public class Chatbot
 		
 	}
 	
+	/**
+	 * Questions Chatbot asks
+	 */
 	private void buildQuestions()
 	{
 		questions[0] = "Have you considered learning forbidden techniques?";
