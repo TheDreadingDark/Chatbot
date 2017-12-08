@@ -23,7 +23,7 @@ public class Chatbot
 		this.movieList = new ArrayList<Movie>();
 		this.shoppingList = new ArrayList<String>();
 		this.cuteAnimalMemes = null;
-		this.currentTime = null;
+		this.currentTime = LocalTime.now();
 		this.questions = new String [6];
 		this.username = username;
 		this.content = null;
@@ -107,6 +107,8 @@ public class Chatbot
 	public String processConversation(String input)
 	{
 		String chatbotResponse = "";
+		currentTime = LocalTime.now();
+		chatbotResponse += currentTime.getHour() + ":" + curentTime.getMinute() + " ";
 		chatbotResponse += "You said:" + "\n" + input + "\n";
 		
 		chatbotResponse += buildChatbotResponse();
@@ -114,6 +116,10 @@ public class Chatbot
 		return chatbotResponse;
 	}
 	
+	/**
+	 * Makes it so you can't say something too short to Chatbot and makes Chatbot respond
+	 * @return
+	 */
 	private String buildChatbotResponse()
 	{
 		String response = "I ";
