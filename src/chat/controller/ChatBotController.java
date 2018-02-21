@@ -3,12 +3,14 @@ package chat.controller;
 import chat.view.PopupDisplay;
 import chat.model.Chatbot;
 import chat.view.ChatFrame;
+import chat.model.CTECTwitter;
 
 public class ChatbotController
 {
 	private Chatbot chatbot;
 	private PopupDisplay display;
 	private ChatFrame appFrame;
+	private CTECTwitter myTwitter;
 	
 	/**
 	 * Declaring variables
@@ -16,14 +18,10 @@ public class ChatbotController
 	public ChatbotController()
 	{
 		chatbot = new Chatbot("AJ Woolsey");
+		myTwitter = new CTECTwitter(this);
 		//View initialized after Model
 		display = new PopupDisplay();
 		appFrame = new ChatFrame(this);
-	}
-	
-	public void handleErrors(Exception error)
-	{
-		popup.displayText(error.getMessage());
 	}
 	
 	/**
@@ -83,5 +81,15 @@ public class ChatbotController
 		//continue with all checkers except length and quit checker
 		
 		return response;
+	}
+	
+	public void handleErrors(Exception error)
+	{
+		display.displayText(error.getMessage());
+	}
+	
+	public void tweet(String text)
+	{
+		myTwitter.sendTweet(text);
 	}
 }
