@@ -133,10 +133,7 @@ public class ChatPanel extends JPanel
 				{
 					public void actionPerformed(ActionEvent click)
 					{
-						String userText = inputField.getText();
-						String displayText = appController.useCheckers(userText);
-						chatArea.append(displayText);;
-						inputField.setText("");
+						
 					}
 				});
 		
@@ -144,10 +141,7 @@ public class ChatPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				String userText = inputField.getText();
-				String displayText = appController.useCheckers(userText);
-				chatArea.append(displayText);;
-				inputField.setText("");
+				
 			}
 		});
 		
@@ -155,10 +149,7 @@ public class ChatPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				String userText = inputField.getText();
-				String displayText = appController.useCheckers(userText);
-				chatArea.append(displayText);;
-				inputField.setText("");
+				
 			}
 		});
 		
@@ -166,10 +157,7 @@ public class ChatPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				String userText = inputField.getText();
-				String displayText = appController.useCheckers(userText);
-				chatArea.append(displayText);;
-				inputField.setText("");
+				
 			}
 		});
 		
@@ -177,10 +165,7 @@ public class ChatPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				String userText = inputField.getText();
-				String displayText = appController.useCheckers(userText);
-				chatArea.append(displayText);;
-				inputField.setText("");
+				
 			}
 		});
 		
