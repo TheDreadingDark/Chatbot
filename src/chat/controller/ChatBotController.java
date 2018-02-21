@@ -21,6 +21,11 @@ public class ChatbotController
 		appFrame = new ChatFrame(this);
 	}
 	
+	public void handleErrors(Exception error)
+	{
+		popup.displayText(error.getMessage());
+	}
+	
 	/**
 	 * Starts the window with Chatbot saying, "What do you want to talk about?"
 	 */

@@ -124,7 +124,7 @@ public class Chatbot
 	{
 		String chatbotResponse = "";
 		currentTime = LocalTime.now();
-		chatbotResponse += currentTime.getHour() + ":" + curentTime.getMinute() + " ";
+		chatbotResponse += currentTime.getHour() + ":" + currentTime.getMinute() + " ";
 		chatbotResponse += "You said:" + "\n" + input + "\n";
 		
 		chatbotResponse += buildChatbotResponse();
