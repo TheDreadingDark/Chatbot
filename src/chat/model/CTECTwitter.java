@@ -129,6 +129,8 @@ public class CTECTwitter
 		String fileText = IOController.loadFromFile(appController, "commonWords.txt");
 		int wordCount = 0;
 		
+		return mostCommon;
+		
 		Scanner wordScanner = new Scanner(fileText);
 		
 		while(wordScanner.hasNextLine())
