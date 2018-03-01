@@ -149,5 +149,8 @@ public class CTECTwitter
 		{
 			boringWords[index] = wordScanner.nextLine();
 		}
+		
+		wordScanner.close();
+		return boringWords;
 	}
 }
